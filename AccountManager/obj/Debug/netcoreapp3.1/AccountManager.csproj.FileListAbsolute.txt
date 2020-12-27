@@ -18,3 +18,9 @@ D:\1-Projects\AccountManager\AccountManager\obj\Debug\netcoreapp3.1\AccountManag
 D:\1-Projects\AccountManager\AccountManager\obj\Debug\netcoreapp3.1\AccountManager.dll
 D:\1-Projects\AccountManager\AccountManager\obj\Debug\netcoreapp3.1\AccountManager.pdb
 D:\1-Projects\AccountManager\AccountManager\obj\Debug\netcoreapp3.1\AccountManager.genruntimeconfig.cache
+D:\1-Projects\AccountManager\AccountManager\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+D:\1-Projects\AccountManager\AccountManager\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+D:\1-Projects\AccountManager\AccountManager\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\1-Projects\AccountManager\AccountManager\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\1-Projects\AccountManager\AccountManager\obj\Debug\netcoreapp3.1\AccountManager.MvcApplicationPartsAssemblyInfo.cs
+D:\1-Projects\AccountManager\AccountManager\obj\Debug\netcoreapp3.1\AccountManager.csproj.CopyComplete
