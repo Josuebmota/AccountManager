@@ -14,6 +14,9 @@ using AccountManager.Data;
 using Microsoft.EntityFrameworkCore;
 using AccountManager.Repositories;
 using AccountManager.Repositories.Interface;
+using AccountManager.Services.Interface;
+using AccountManager.Services;
+using Microsoft.OpenApi.Models;
 
 namespace AccountManager
 {
@@ -36,11 +39,23 @@ namespace AccountManager
                        .AllowAnyHeader();
             }));
             services.AddScoped<IDespesaRepository, DespesaRepository>();
+            services.AddScoped<IReceitaRepository, ReceitaRepository>();
+            services.AddScoped<IMonitorandoService, MonitorandoService>();
             services.AddRouting(r => r.SuppressCheckForUnhandledSecurityMetadata = true);
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "My Api", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo 
+                    { 
+                        Title = "My Api", 
+                        Version = "v1" ,
+                        Description = "Simples webapi",
+                        Contact = new OpenApiContact
+                        {
+                            Name = "Josué B. Mota",
+                            Email = "josuebatistam1@gmail.com"
+                        }
+                    });
             });
             services.AddDbContext<DataContext>(opt => opt.UseInMemoryDatabase("DataContext"));
             services.AddScoped<DataContext, DataContext>();
@@ -56,7 +71,10 @@ namespace AccountManager
                 context.Items["__CorsMiddlewareInvoked"] = true;
                 return next();
             });
-            app.UseSwagger();
+            app.UseSwagger(c =>
+            {
+                c.SerializeAsV2 = true;
+            }); 
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");

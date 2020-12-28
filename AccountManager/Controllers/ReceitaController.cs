@@ -25,7 +25,7 @@ namespace AccountManager.Controllers
             if (ModelState.IsValid)
             {
                 receitaRepository.Add(model);
-                return Ok(model);
+                return Created("Receita criada",model);
             }
             else
             {

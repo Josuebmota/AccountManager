@@ -25,7 +25,7 @@ namespace AccountManager.Controllers
             if (ModelState.IsValid)
             {
                 despesaRepository.Add(model);
-                return Ok(model);
+                return Created("Despesa Criada",model);
             }
             else
             {

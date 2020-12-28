@@ -19,27 +19,27 @@ namespace AccountManager.Repositories
 
         public void Add(Despesa item)
         {
-            context.Despesas.Add(item);
+            context.Despesa.Add(item);
             context.SaveChanges();
         }
 
         public List<Despesa> GetAll()
         {
-            return context.Despesas.ToList();
+            return context.Despesa.ToList();
         }
         public Despesa Find(int id)
         {
-            return context.Despesas.FirstOrDefault(d => d.id == id);
+            return context.Despesa.FirstOrDefault(d => d.id == id);
         }
         public void Update(Despesa item)
         {
-            context.Despesas.Update(item);
+            context.Despesa.Update(item);
             context.SaveChanges();
         }
         public void Delete(int id)
         {
-            var despesa = context.Despesas.First(d => d.id == id);
-            context.Despesas.Remove(despesa);
+            var despesa = context.Despesa.First(d => d.id == id);
+            context.Despesa.Remove(despesa);
             context.SaveChanges();
         }
 

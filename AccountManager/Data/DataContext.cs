@@ -9,7 +9,7 @@ namespace AccountManager.Data
             : base(options)
         {}
 
-        public DbSet<Despesa> Despesas { get; set; }
+        public DbSet<Despesa> Despesa { get; set; }
         public DbSet<Receita> Receita { get; set; }
 
     }
