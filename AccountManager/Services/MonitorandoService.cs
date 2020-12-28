@@ -26,7 +26,7 @@ namespace AccountManager.Services
         }
         public decimal AllReceitas()
         {
-            var receitas = context.Receita.Where(d => d.pago == true).ToList();
+            var receitas = context.Receita.Where(d => d.recebido == true).ToList();
             var value = receitas.Sum(d => d.valor);
             return value;
         }

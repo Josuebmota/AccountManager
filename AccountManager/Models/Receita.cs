@@ -21,6 +21,6 @@ namespace AccountManager.Models
         [Column("DATA")]
         public DateTime data { get; set; }
         [Column("RECEBIDO")]
-        public bool pago { get; set; }
+        public bool recebido { get; set; }
     }
 }
