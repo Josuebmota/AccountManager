@@ -10,6 +10,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AccountManager.Data;
+using Microsoft.EntityFrameworkCore;
+using AccountManager.Repositories;
+using AccountManager.Repositories.Interface;
 
 namespace AccountManager
 {
@@ -31,12 +35,15 @@ namespace AccountManager
                        .AllowAnyMethod()
                        .AllowAnyHeader();
             }));
+            services.AddScoped<IDespesaRepository, DespesaRepository>();
             services.AddRouting(r => r.SuppressCheckForUnhandledSecurityMetadata = true);
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "My Api", Version = "v1" });
             });
+            services.AddDbContext<DataContext>(opt => opt.UseInMemoryDatabase("DataContext"));
+            services.AddScoped<DataContext, DataContext>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
