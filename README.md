@@ -48,7 +48,7 @@ cd AccountManager
 
 Sinta-se a vontade de registrar um novo problema, com um respectivo título e descrição no repositório do [AccountManager](https://github.com/Josuebmota/AccountManager/issues). Se encontrar a solução, avaliarei seu Pull Request.
 
-#### 👨‍💻 [](<[https://github.com/Josuebmota/AccountManager](https://github.com/Josuebmota/AccountManager)#autor>)Autores
+#### 👨‍💻 [](<[https://github.com/Josuebmota/AccountManager](https://github.com/Josuebmota/AccountManager)#autor>)Autor
 
 Criado por [**Josué Batista Mota** ](https://github.com/Josuebmota), <br>esse projeto está sobre [MIT license](./LICENSE) 📃.
 
