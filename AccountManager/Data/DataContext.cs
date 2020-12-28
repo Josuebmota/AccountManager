@@ -10,6 +10,7 @@ namespace AccountManager.Data
         {}
 
         public DbSet<Despesa> Despesas { get; set; }
+        public DbSet<Receita> Receita { get; set; }
 
     }
 
